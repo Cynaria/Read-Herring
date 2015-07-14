@@ -7,6 +7,7 @@ header.navigation {
   width: 100%;
   z-index: 999;
   .navigation-wrapper {
+    position: relative;
     @include clearfix;
     @include outer-container;
     position: relative;
@@ -52,7 +53,6 @@ header.navigation {
     line-height: $navigation-height;
     margin: 0;
     padding: 1em;
-    text-transform: uppercase;
 
     @include media ($horizontal-bar-mode) {
       display: none;
@@ -73,6 +73,8 @@ header.navigation {
 
     @include media ($horizontal-bar-mode) {
       float: left;
+      position: relative;
+      transform: translate(0,13%);
     }
   }
 
@@ -82,7 +84,6 @@ header.navigation {
     display: none;
     margin: 0 auto;
     overflow: visible;
-    padding: 0;
     width: 100%;
     z-index: 9999;
 
