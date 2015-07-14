@@ -15,9 +15,14 @@ header.navigation {
 
   svg {
     float: left;
+    display:inline;
     max-height: $navigation-height;
-    margin: 0.8em 0;
+    max-width: 50%;
+    margin: 0.5em;
     fill: $cream-white;
+    @include media($horizontal-bar-mode){
+      max-width: 25%;
+    }
   }
 
   a.logo {
@@ -42,12 +47,11 @@ header.navigation {
 
   .navigation-menu-button {
     color: $navigation-color;
-    display: block;
     float: right;
     font-weight: 700;
     line-height: $navigation-height;
     margin: 0;
-    padding-right: 1em;
+    padding: 1em;
     text-transform: uppercase;
 
     @include media ($horizontal-bar-mode) {
