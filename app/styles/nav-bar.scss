@@ -1,11 +1,11 @@
 header.navigation {
 
+  font-family: $sans-narrow;
   background-color: $navigation-background;
   border-bottom: 1px solid darken($navigation-background, 10);
   min-height: $navigation-height;
   width: 100%;
   z-index: 999;
-
   .navigation-wrapper {
     @include clearfix;
     @include outer-container;
@@ -13,15 +13,28 @@ header.navigation {
     z-index: 9999;
   }
 
-  .logo {
+  svg {
     float: left;
     max-height: $navigation-height;
-    padding-left: $navigation-padding;
-    padding-right: 2em;
+    margin: 0.8em 0;
+    fill: $cream-white;
+  }
 
-    img {
-      max-height: $navigation-height;
-      padding: 0.8em 0;
+  a.logo {
+    float: left;
+    max-height: $navigation-height;
+    padding-right: 2em;
+    display: none;
+    color: $navigation-color;
+    text-decoration: none;
+    &:hover{
+      color: white;
+    }
+    &.show {
+      display: inline-block;
+    }
+    @include media ($horizontal-bar-mode) {
+      display: inline;
     }
   }
 
